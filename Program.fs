@@ -36,7 +36,7 @@ type Startup() =
 [<EntryPoint>]
 let main _ =
     let baseAddress = "http://localhost:8000"
-    printfn "Starting calculator server on '%s'. Press <ENTER> to exit:" baseAddress
+    printfn "Starting calculator server on '%s'. Press <ENTER> to stop:" baseAddress
     use app = WebApp.Start<Startup>(baseAddress)
     Console.ReadLine() |> ignore
     0 // return an integer exit code
